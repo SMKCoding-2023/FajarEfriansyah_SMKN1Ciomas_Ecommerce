@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 50, 64, 255;
+
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    font-family: 'Arial', sans-serif;
+}
+
+img{
+  
+  width: 50% ;
+  -ms-flex-item-align: center;
+
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .card {
+        max-width: 80%; /* Adjust the maximum width of the card for larger screens */
+        margin: 0 auto; /* Center the card horizontally */
+    }
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+}
